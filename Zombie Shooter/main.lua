@@ -123,10 +123,14 @@ function love.draw()
 end
 
 function love.keypressed(key)
-    if key == "space" then
+    if key == "return" or key == "enter" then
         spawnZombie()
     end
+    if key == "space" then
+        spawnBullet()
+    end
 end
+
 
 function love.mousepressed(x, y, button)
     if button == 1 and gameState == 2 then
